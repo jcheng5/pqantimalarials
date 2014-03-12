@@ -17,8 +17,15 @@
 #' output data and visualizations as CSVs and PDFs respectively.
 
 #' @references
-#' Renschler et al. (2014)
-#'   Blower et al. (1991)
+#' J. Patrick Renschler, Kelsey Walters, Paul Newton,
+#'   Ramanan Laxminarayan. "Estimated under-five deaths
+#'   associated with poor-quality antimalarials in
+#'   sub-Sarahan Africa". 2014.
+
+#' S. Blower and H. Dowlatabadi. "Sensitivity and Uncertainty
+#'   Analysis of Complex Models of Disease Transmission: an
+#'   HIV Model, as an Example". International Statistical Review
+#'   (1994). 229-243.
 
 #' @export
 #' @examples
@@ -26,9 +33,9 @@
 
 webtool <- function(){
   library(shiny)
-  message(paste("If web tool doesn't open automatically,",
-  "open your browser and visit the url below.", sep = ""))
+
   
   shiny::runApp(system.file('webtool', package = 'pqantimalarials'))
-
+  message(paste("If web tool doesn't open automatically,",
+  "open your browser and point to the url above.", sep = ""))
 }

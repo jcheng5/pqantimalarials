@@ -2,33 +2,20 @@
 \name{pqantimalarials}
 \alias{pqantimalarials}
 \alias{pqantimalarials-package}
-\title{Estimating child deaths associated with poor-quality
-antimalarials in sub-Saharan Africa
-pqantimalarials provides an interactive webtool that
-allows users to produce their own estimates of the
-number of under-five deaths associated with poor-
-quality antimalarials in sub-Saharan Africa according
-to the methodology of Renschler et al. (2014). Users
-can set the input paramaters and download the results
-from uncertainty and sensitivity analyses. You can
-follow the development of this package at:
-\url{https://github.com/renschler/pqantimalarials}
-pqantimalarials has one function \code{webtool()}
-that starts the interactive web tool on the user's
-machine.}
+\title{Estimated under-five deaths associated with poor-quality
+  antimalarials in sub-Saharan Africa.}
 \description{
-Estimating child deaths associated with poor-quality
-antimalarials in sub-Saharan Africa pqantimalarials
-provides an interactive webtool that allows users to
-produce their own estimates of the number of under-five
-deaths associated with poor- quality antimalarials in
-sub-Saharan Africa according to the methodology of
-Renschler et al. (2014). Users can set the input paramaters
-and download the results from uncertainty and sensitivity
-analyses. You can follow the development of this package
-at: \url{https://github.com/renschler/pqantimalarials}
-pqantimalarials has one function \code{webtool()} that
-starts the interactive web tool on the user's machine.
+pqantimalarials provides an interactive webtool that allows
+users to produce their own estimates of the number of
+under-five deaths associated with poor- quality
+antimalarials in sub-Saharan Africa according to the
+methodology of Renschler et al. (2014). Users can set the
+input paramaters and download the results from uncertainty
+and sensitivity analyses. pqantimalarials has one function
+\code{webtool()} that starts the interactive web tool on
+the user's machine. You can follow the development of this
+package at:
+\url{https://github.com/renschler/pqantimalarials}.
 }
 \references{
 J. Patrick Renschler, Kelsey Walters, Paul Newton, Ramanan

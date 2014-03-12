@@ -2,7 +2,7 @@
 library(RColorBrewer)
 library(reshape2)
 library(shiny)
-source(miscFunctions.R)
+source("miscFunctions.R")
 
 names <- privateSales$Country
 
