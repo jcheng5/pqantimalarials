@@ -41,11 +41,13 @@ shinyServer(function(input, output) {
 		inputID <- as.integer(inputID)
 		#print(paste(inputID, "sim1"))
 		#print(inputID)
+		sameFlag <- FALSE
 		
 		countrySpec <- input$countrySpecific
 		numReps <- input$N
 		minCFR <- input$CFR[1]
 		maxCFR <- input$CFR[2]
+		if(minCFR == maxCFR) sameFlag <- TRUE
 		
 		if(countrySpec){
 			# make dependent on Update button
@@ -55,10 +57,14 @@ shinyServer(function(input, output) {
 			
 			maxPrev <- isolate(c(input$Prev1[2],input$Prev2[2],input$Prev3[2],input$Prev4[2],input$Prev5[2],input$Prev6[2],input$Prev7[2],input$Prev8[2],input$Prev9[2],input$Prev10[2],input$Prev11[2],input$Prev12[2],input$Prev13[2],input$Prev14[2],input$Prev15[2],input$Prev16[2],input$Prev17[2],input$Prev18[2],input$Prev19[2],input$Prev20[2],input$Prev21[2],input$Prev22[2],input$Prev23[2],input$Prev24[2],input$Prev25[2],input$Prev26[2],input$Prev27[2],input$Prev28[2],input$Prev29[2],input$Prev30[2],input$Prev31[2],input$Prev32[2],input$Prev33[2],input$Prev34[2],input$Prev35[2],input$Prev36[2],input$Prev37[2],input$Prev38[2],input$Prev39[2]))
 			
+			for(i in 1:39){
+				if(minPrev[i] == maxPrev[i]) sameFlag <- TRUE
+			}
 		}
 		else{
 			minPrev <- input$Prev[1]
 			maxPrev <- input$Prev[2]
+			if(minPrev == maxPrev) sameFlag <- TRUE
 		}
 		
 		
@@ -96,7 +102,7 @@ shinyServer(function(input, output) {
 		calculations <- data.frame(calculations)
 		colnames(calculations) <- names
 		#print(colnames(calculations))
-		calculations <- list(calculations, deathRate, sales, fakePercent,inputID)
+		calculations <- list(calculations, deathRate, sales, fakePercent,inputID, sameFlag)
 		calculations
 	}
 	)
@@ -832,6 +838,11 @@ shinyServer(function(input, output) {
 	generatePRCC <- reactive(
 	{
 		out <- generateLHS()
+		sameFlag <- out[6]
+		#print(sameFlag)
+		if(sameFlag == TRUE){
+			stop("Partial Rank Correlation Coefficients cannot be calculated when at least one of the input parameters does not have a range (i.e. the min and max slider for that input parameter are set to the same value).")
+		}
 		results <- out[1]
 		results <- data.frame(results)
 		
@@ -879,6 +890,7 @@ shinyServer(function(input, output) {
 
 		totDeathSens <- data.frame(rownames(totDeathSens), totDeathSens[,1], totDeathSens[,2], stringsAsFactors = FALSE)
 		colnames(totDeathSens) <- c("Input Parameter","PRCC", "P-value")
+		totDeathSens <- totDeathSens[order(totDeathSens$PRCC, decreasing = TRUE),]
 		rownames(totDeathSens) <- NULL
 		
 		#print(class(totDeathSens$PRCC))

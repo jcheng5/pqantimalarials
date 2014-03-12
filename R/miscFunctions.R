@@ -150,12 +150,20 @@ stdUniform = function(min, max){
 counterfeitPRCC = function(x, sort.results = FALSE, sort.abs = FALSE) {
 	# This code was adopted from Eili Klein <klein@cddep.org>
 	
+	# N = number of simulations
 	N = length(x[, 1])
+	#print("N:")
+	#print(N)
+	
+	# k = number of input parameters + 1 output var
 	k = length(x[1, ])
+	#print("K:")
+	#print(k)
 
-	# Rank each variable\n
+	# Rank each input parameter
 	r = matrix(NA, nrow = N, ncol = k)
 	for (i in 1:k) {
+		#r[, i] = rank(ties.method = "min",x[, i])
 		r[, i] = rank(x[, i])
 	}
 
