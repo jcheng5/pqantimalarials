@@ -1,5 +1,5 @@
-#not sure if I will need this
-#library("rms")
+library(rms)
+library(plyr)
 
 getNormalLHS = function(N, mean, sd, aboveZeroOnly = TRUE) {
 	# returns a LHS from the normal distibution with
@@ -89,7 +89,6 @@ getUniformLHS = function(N, min, max) {
 ##   na.rm: a boolean that indicates whether to ignore NA's
 ##   conf.interval: the percent range of the confidence interval (default is 95%)
 summarySE <- function(data = NULL, measurevar, groupvars = NULL, na.rm = FALSE, conf.interval = 0.95, .drop = TRUE) {
-	require(plyr)
 
 	# New version of length which can handle NA's: if na.rm==T, don't count them
 	length2 <- function(x, na.rm = FALSE) {
@@ -149,7 +148,8 @@ stdUniform = function(min, max){
 }
 
 counterfeitPRCC = function(x, sort.results = FALSE, sort.abs = FALSE) {
-
+	# This code was adopted from Eili Klein <klein@cddep.org>
+	
 	N = length(x[, 1])
 	k = length(x[1, ])
 

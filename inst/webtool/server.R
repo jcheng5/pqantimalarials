@@ -1,12 +1,7 @@
-# don't know which ones I will need of the below
-#library(shiny)
-#library(reshape2)
-#library(RColorBrewer)
-#source("miscFunctions.R")
-
-### Read in Cohen Sales Data ###
-# privateSales <- read.csv("CohenData_UnderFivePfPosPrivateSales.csv")
-# privateSales <- cbind(privateSales["Country"], privateSales["amsu5privpos"], privateSales["Q1Q3AvgStDev"])
+# server.R
+library(RColorBrewer)
+library(reshape2)
+library(shiny)
 
 names <- privateSales$Country
 

@@ -1,10 +1,7 @@
-# not sure if I will need the below library call
-#library(shiny)
+# ui.R
+library(shiny)
 
-# privateSales2 <- read.csv("CohenData_UnderFivePfPosPrivateSales.csv")
-# privateSales2 <- cbind(privateSales2["Country"], privateSales2["amsu5privpos"], privateSales2["Q1Q3AvgStDev"])
-
-privateSales2 <- privateSales[order(privateSales2$amsu5privpos, decreasing = TRUE),]
+privateSales2 <- privateSales[order(privateSales$amsu5privpos, decreasing = TRUE),]
 names2 <- privateSales2$Country
 names2 <- paste(names2)
 names2 <- names2[order(names2)]
@@ -398,13 +395,9 @@ shinyUI(pageWithSidebar(
     			h4("Methods"),
     			wellPanel(p("For each country we calculated the number of under-five deaths caused by malaria treatment failure due to consumption of poor quality antimalarials as the product of three inputs: the number of private sector antimalarials consumed by malaria-positive children in 2013, the proportion of private sector antimalarials consumed that are poor quality, and the case fatality rate (CFR) of under-five malaria-positive children who receive poor quality antimalarials. We selected the 39 sub-Saharan nations included in our analysis because antimalarial consumption estimates were available. Probability distributions were constructed for each input parameter, and an uncertainty analysis was conducted according to the Latin hypercube sampling method. Partial Rank Correlation Coefficients were calculated for a sensitivity analysis. Please see the publication for more details and references.")),
     			h4("Authors"),
-    			wellPanel(p("Working Paper: J. Patrick Renschler, Kelsey Walters, Paul Newton, Ramanan Laxminarayan"),p("\n"), p("--Insert Manuscript Citation--")),
-				h4("FAQ"),
-				wellPanel(p("Q1: When I download the CSV files and PDFs, what do the numbers at the beginnings of the filenames mean?"),
-				p("\n"),
-				p("A1: For every set of inputs, a random number is generated to 'tag' your downloads.That way if you are iterating over different input settings you will know which downloads belong to which input settings. Be sure to download the input CSV if you want to be able to look up exactly what input settings you used to generate your results.")),
+    			wellPanel(p("J. Patrick Renschler, Kelsey Walters, Paul Newton, Ramanan Laxminarayan. \"Estimated under-five deaths associated with poor-quality antimalarials in sub-Saharan Africa\".  2014. Paper submitted.")),
 				h4("Help"),
-				wellPanel(p("For help refer to the github repository README:"),a(href="https://github.com/prenschler/PqAntimalarialsShinyApp", "https://github.com/prenschler/PqAntimalarialsShinyApp"),p("\n"),p("or email renschler@cddep.org"))
+				wellPanel(p("For help refer to the github repository README:"),a(href="https://github.com/renschler/pqantimalarials", "https://github.com/renschler/pqantimalarials"),p("\n"),p("or email renschler@cddep.org"))
     			)#end tab panel
 		)    	
   	)
