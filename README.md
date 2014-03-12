@@ -12,7 +12,7 @@ caused by poor-quality antimalarials in sub-Saharan Africa presented in:
 The pqantimalarials package only has one function, and this function
 starts the interactive web tool:
 
->pqawebtool()
+>webtool()
 
 To close the web tool:
 
@@ -64,3 +64,4 @@ what input settings you used to generate your results.
 * Frank E Harrell Jr (2013). rms: Regression Modeling Strategies. R package version 4.0-0. [rms](http://CRAN.R-project.org/package=rms)
 * Hadley Wickham (2011). The Split-Apply-Combine Strategy for Data Analysis. Journal of Statistical Software,
   40(1), 1-29. [plyr](http://www.jstatsoft.org/v40/i01/)
+* RStudio and Inc. (2013). shiny: Web Application Framework for R. R package version 0.8.0.99. [shiny](http://www.rstudio.com/shiny/)
