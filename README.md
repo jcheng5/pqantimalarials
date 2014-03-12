@@ -60,3 +60,10 @@ downloads.That way if you are iterating over different input settings
 you will know which downloads belong to which input settings. Be sure
 to download the input CSV if you want to be able to look up exactly
 what input settings you used to generate your results.
+
+#### Package Citations ####
+* Erich Neuwirth (2011). RColorBrewer: ColorBrewer palettes. R package version 1.0-5. [RColorBrewer](http://CRAN.R-project.org/package=RColorBrewer)
+* Hadley Wickham (2007). Reshaping Data with the reshape Package. Journal of Statistical Software, 21(12), 1-20. [reshape2](http://www.jstatsoft.org/v21/i12/)
+* Frank E Harrell Jr (2013). rms: Regression Modeling Strategies. R package version 4.0-0. [rms](http://CRAN.R-project.org/package=rms)
+* Hadley Wickham (2011). The Split-Apply-Combine Strategy for Data Analysis. Journal of Statistical Software,
+  40(1), 1-29. [plyr](http://www.jstatsoft.org/v40/i01/)
