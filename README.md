@@ -6,7 +6,7 @@ reproduce and modify the estimates of under-five deaths caused by
 poor-quality antimalarials in sub-Saharan Africa presented in:
 
 > J. Patrick Renschler, Kelsey Walters, Paul Newton, Ramanan Laxminarayan
-> "Estimated under-five deaths associated with poor-quality antimalarials
+> ."Estimated under-five deaths associated with poor-quality antimalarials
 > in sub-Saharan Africa". 2014. Paper submitted.
 
 The pqantimalarials package only has one function, and this function
@@ -22,23 +22,20 @@ To close the web tool:
 
 
 Users set input parameters using interactive sliders:
-* the number of simulations for an uncertainty and sensitivity analysis,
-performed accorind to the latin hypercube sampling scheme with
-calculation of partial rank correlation coefficients
+* the number of simulations for an uncertainty and sensitivity analysis
 * the case fatality rate of under-five malaria positive children who
 consume poor-quality antimalarials
-* the prevalence of poor-quality antimalarials amongst total
-antimalarials that are available for purchase
+* the prevalence of poor-quality antimalarials
 
 Users are able to download:
 * input settings (CSV)
 * output plots (PDF)
 * output data (CSV)
 
-For a given set of input settings, the filenames of any downloaded
-files are tagged with a randomly generated ID number - so that users
-can download results generated using different input settings, and
-later be able to reference which settings were used for what outputs.
+For a given set of input settings, the downloaded files are tagged
+with a randomly generated ID number - so that users can download
+results generated using different input settings, and later be able
+to reference which settings were used for what outputs.
 
 You can track development of this package at:
 http://github.com/renschler/pqantimalarials
