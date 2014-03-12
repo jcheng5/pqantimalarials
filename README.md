@@ -46,7 +46,7 @@ run enter the following lines into your R console.
 
 > install.packages("pqantimalarials")
 
-> pqawebtool()
+> webtool()
 
 #### FAQ
 Q: When I download the CSV files and PDFs, what do the numbers at the
