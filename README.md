@@ -1,9 +1,9 @@
 ### pqantimalarials README.md
 
 #### About
-pqantimalarials is an interactive web tool that allows users to
-reproduce and modify the estimates of under-five deaths caused by
-poor-quality antimalarials in sub-Saharan Africa presented in:
+pqantimalarials is a R package that runs an interactive web tool which
+allows users to reproduce and modify the estimates of under-five deaths
+caused by poor-quality antimalarials in sub-Saharan Africa presented in:
 
 > J. Patrick Renschler, Kelsey Walters, Paul Newton, Ramanan Laxminarayan
 > ."Estimated under-five deaths associated with poor-quality antimalarials
