@@ -22,11 +22,6 @@
 #'   associated with poor-quality antimalarials in
 #'   sub-Sarahan Africa". 2014.
 
-#' S. Blower and H. Dowlatabadi. "Sensitivity and Uncertainty
-#'   Analysis of Complex Models of Disease Transmission: an
-#'   HIV Model, as an Example". International Statistical Review
-#'   (1994). 229-243.
-
 #' @export
 #' @examples
 #' webtool()
@@ -34,8 +29,6 @@
 webtool <- function(){
   library(shiny)
 
-  
   shiny::runApp(system.file('webtool', package = 'pqantimalarials'))
-  message(paste("If web tool doesn't open automatically,",
-  "open your browser and point to the url above.", sep = ""))
+  
 }

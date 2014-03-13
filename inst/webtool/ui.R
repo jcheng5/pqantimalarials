@@ -1,7 +1,11 @@
 # ui.R
 library(shiny)
 
-privateSales2 <- privateSales[order(privateSales$amsu5privpos, decreasing = TRUE),]
+message(paste("\n***ATTENTION*** If web tool doesn't open automatically, ",
+  "open your browser and point to the url above.", sep = ""))
+
+
+privateSales2 <- privateSales[order(privateSales$u5Sales, decreasing = TRUE),]
 names2 <- privateSales2$Country
 names2 <- paste(names2)
 names2 <- names2[order(names2)]

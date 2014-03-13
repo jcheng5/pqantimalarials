@@ -27,10 +27,6 @@ webtool()
 \references{
 J. Patrick Renschler, Kelsey Walters, Paul Newton, Ramanan
 Laxminarayan. "Estimated under-five deaths associated with
-poor-quality antimalarials in sub-Sarahan Africa". 2014. S.
-Blower and H. Dowlatabadi. "Sensitivity and Uncertainty
-Analysis of Complex Models of Disease Transmission: an HIV
-Model, as an Example". International Statistical Review
-(1994). 229-243.
+poor-quality antimalarials in sub-Sarahan Africa". 2014.
 }
 
