@@ -2,10 +2,8 @@
 library(shiny)
 
 message(paste0("\n***ATTENTION*** If web tool doesn't open automatically, ",
-  "open your browser and point to the url above."))
-
-message("Hit ESC or Ctrl+C to stop the web tool.")
-
+  "open your browser and point to the url above. ","Hit ESC or Ctrl+C ",
+  "to stop the web tool."))
 
 privateSales2 <- privateSales[order(privateSales$u5Sales, decreasing = TRUE),]
 names2 <- privateSales2$Country
