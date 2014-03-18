@@ -341,13 +341,15 @@ shinyUI(pageWithSidebar(
     				plotOutput("malariaProp"),    				
     				wellPanel(p("Median estimates of under-five malaria deaths caused by poor quality antimalarials",
     				"as a proportion of 2010 under-five malaria deaths (error bars as interquartile range)",
-    				"[Source: WHO Malaria Report 2012].")),
+    				 a(href="http://apps.who.int/gho/data/node.main.GBDC-YEARS0-4?lang=en", "[Source: WHO Global Health Observatory Data Repository 2010]."))),
 
 					h4("Median Death Estimates as a Proportion of Total All-Cause Deaths"),
 					downloadButton('downloadDeathProp', 'Download as PDF'),
     				plotOutput("deathProp"),
     				wellPanel(p("Median estimates of under-five malaria deaths caused by poor quality antimalarials",
-    				"as a proportion of 2012 under-five all-cause deaths (error bars as interquartile range) [Source: WHO MDG4 2012","Under-five mortality by country]."))), #end tab panel
+    				"as a proportion of 2012 under-five all-cause deaths (error bars as interquartile range)",
+    				a(href="http://apps.who.int/gho/data/node.main.525", "[Source: WHO Global Health Observatory Data Repository 2012].")
+    				 ))), #end tab panel
     		
     		tabPanel("Summary Statistics",
     				h4("Summary Statistics"),
@@ -401,7 +403,7 @@ shinyUI(pageWithSidebar(
     			h4("Authors"),
     			wellPanel(p("J. Patrick Renschler, Kelsey Walters, Paul Newton, Ramanan Laxminarayan. \"Estimated under-five deaths associated with poor-quality antimalarials in sub-Saharan Africa\".  2014. Paper submitted.")),
 				h4("Help"),
-				wellPanel(p("For help refer to the github repository README:"),a(href="https://github.com/renschler/pqantimalarials", "https://github.com/renschler/pqantimalarials"),p("\n"),p("or email renschler@cddep.org"))
+				wellPanel(p("For help refer to the github repository README:"),a(href="https://github.com/renschler/pqantimalarials", "https://github.com/renschler/pqantimalarials"),p("\n"),p("or email:"), a(href= "mailto:renschler@cddep.org", "renschler@cddep.org"))
     			)#end tab panel
 		)    	
   	)
