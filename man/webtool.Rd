@@ -21,9 +21,18 @@ uncertainty and sensitivity analyses that were performed
 using their input settings. Users can download the output
 data and visualizations as CSVs and PDFs respectively.
 }
+\examples{
+\dontrun{
+# Start the web tool
+webtool()
+}
+}
 \references{
 J. Patrick Renschler, Kelsey Walters, Paul Newton, Ramanan
 Laxminarayan. "Estimated under-five deaths associated with
 poor-quality antimalarials in sub-Sarahan Africa". 2014.
+}
+\seealso{
+\code{\link{runApp}} which this function wraps.
 }
 
