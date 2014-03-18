@@ -4,7 +4,9 @@
 #' This function starts the interactive web tool which
 #' runs locally on the user's machine. If the browser doesn't
 #' open automatically, the function provides the url so you can
-#' manually open your browser and view the site.
+#' manually open your browser and view the site. This function
+#' normally does not return; interrupt R to stop the application
+#' (usually by pressing Esc or Ctrl+C).
 #' @seealso \code{\link{runApp}} which this function wraps.
 #' @details
 #' Within the web tool, the left panel allows users to set input

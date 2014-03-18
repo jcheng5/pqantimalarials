@@ -21,12 +21,13 @@ Description: This package allows users to calculate the number of
 Version: 0.1
 Author: J. Patrick Renschler <patrick.renschler@gmail.com>
 Maintainer: J. Patrick Renschler <patrick.renschler@gmail.com>
+Depends:
+    methods
 Imports:
     shiny,
     reshape2,
     RColorBrewer,
     rms,
-    plyr,
-    methods
+    plyr
 LazyData: true
 License: GPL-3
