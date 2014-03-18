@@ -1,8 +1,10 @@
-# ui.R
+### ui.R
 library(shiny)
 
-message(paste("\n***ATTENTION*** If web tool doesn't open automatically, ",
-  "open your browser and point to the url above.", sep = ""))
+message(paste0("\n***ATTENTION*** If web tool doesn't open automatically, ",
+  "open your browser and point to the url above."))
+
+message("Hit ESC or Ctrl+C to stop the web tool.")
 
 
 privateSales2 <- privateSales[order(privateSales$u5Sales, decreasing = TRUE),]

@@ -1,5 +1,5 @@
-library(rms)
-library(plyr)
+#library(rms)
+#library(plyr)
 
 getNormalLHS = function(N, mean, sd, aboveZeroOnly = TRUE) {
 	# returns a LHS from the normal distibution with
@@ -98,7 +98,7 @@ summarySE <- function(data = NULL, measurevar, groupvars = NULL, na.rm = FALSE, 
 	}
 
 	# This is does the summary; it's not easy to understand...
-	datac <- ddply(data, groupvars, .drop = .drop, 
+	datac <- plyr::ddply(data, groupvars, .drop = .drop, 
 					.fun = function(xx, col, na.rm) {
 						c(N = length2(xx[, col], na.rm = na.rm),
 						 mean = mean(xx[, col], na.rm = na.rm),
@@ -112,7 +112,7 @@ summarySE <- function(data = NULL, measurevar, groupvars = NULL, na.rm = FALSE, 
 			measurevar, na.rm)
 
 	# Rename the "mean" column    
-	datac <- rename(datac, c("mean" = measurevar))
+	datac <- plyr::rename(datac, c("mean" = measurevar))
 
 	datac$se <- datac$sd/sqrt(datac$N) # Calculate standard error of the mean
 
@@ -234,7 +234,7 @@ counterfeitPRCC = function(x, sort.results = FALSE, sort.abs = FALSE) {
 		}
 	}
 
-	B = matinv(C.ij)
+	B = rms::matinv(C.ij)
 
 	gamma.ij = rep(0, k)
 	t.iy = rep(0, k)

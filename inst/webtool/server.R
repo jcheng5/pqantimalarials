@@ -1,6 +1,6 @@
-# server.R
-library(RColorBrewer)
-library(reshape2)
+### server.R
+#library(RColorBrewer)
+#library(reshape2)
 library(shiny)
 source("miscFunctions.R")
 
@@ -11,7 +11,7 @@ WHOdeaths <- u5deathsWHO2012
 WHOmalaria <- u5malariadeathsWHO2010
 
 # get colors
-palette <- brewer.pal(9, "Blues")
+palette <- RColorBrewer::brewer.pal(9, "Blues")
 
 #print("I Am HERE FIRST")
 
@@ -121,7 +121,7 @@ shinyServer(function(input, output) {
 		colnames(results) = c(paste(privateSales$Country), "All Countries", "SimulationNumber")
 		
 		# reformat data from wide to long format
-		meltedOutput <- melt(results, id.vars = c("SimulationNumber"))
+		meltedOutput <- reshape2::melt(results, id.vars = c("SimulationNumber"))
 
 		# use summary function to generate summary
 		meltedSummary <- summarySE(meltedOutput, measurevar = "value", groupvars = c("variable"))
@@ -197,7 +197,7 @@ shinyServer(function(input, output) {
 		colnames(results) = c(paste(privateSales$Country), "All Countries", "SimulationNumber")
 		
 		# reformat data from wide to long format
-		meltedOutput <- melt(results, id.vars = c("SimulationNumber"))
+		meltedOutput <- reshape2::melt(results, id.vars = c("SimulationNumber"))
 
 		# use summary function to generate summary
 		meltedSummary <- summarySE(meltedOutput, measurevar = "value", groupvars = c("variable"))
@@ -258,7 +258,7 @@ shinyServer(function(input, output) {
 		colnames(results) = c(paste(privateSales$Country), "All Countries", "SimulationNumber")
 		
 		# reformat data from wide to long format
-		meltedOutput <- melt(results, id.vars = c("SimulationNumber"))
+		meltedOutput <-reshape2::melt(results, id.vars = c("SimulationNumber"))
 
 		# use summary function to generate summary
 		meltedSummary <- summarySE(meltedOutput, measurevar = "value", groupvars = c("variable"))
@@ -308,14 +308,14 @@ shinyServer(function(input, output) {
 		text(x = as.vector(plot)-.3, y = -(.02*ymax), medianGraphs2$variable[1:39], adj = c(0,0), cex = .85)
     }
     
-    output$raw <- renderPlot(
+    output$raw <-  renderPlot(
     {
     	plotRaw()
     }
     )
     
     # handler for downloading median Estimates as pdf
-	output$downloadMedianEstimates <- downloadHandler(
+    output$downloadMedianEstimates <- downloadHandler(
 		
 		filename = function() { 
 			results <- generateLHS()
@@ -344,7 +344,7 @@ shinyServer(function(input, output) {
 		colnames(results) = c(paste(privateSales$Country), "All Countries", "SimulationNumber")
 		
 		# reformat data from wide to long format
-		meltedOutput <- melt(results, id.vars = c("SimulationNumber"))
+		meltedOutput <-reshape2::melt(results, id.vars = c("SimulationNumber"))
 
 		# use summary function to generate summary
 		meltedSummary <- summarySE(meltedOutput, measurevar = "value", groupvars = c("variable"))
@@ -412,7 +412,7 @@ shinyServer(function(input, output) {
 		colnames(results) = c(paste(privateSales$Country), "All Countries", "SimulationNumber")
 		
 		# reformat data from wide to long format
-		meltedOutput <- melt(results, id.vars = c("SimulationNumber"))
+		meltedOutput <-reshape2::melt(results, id.vars = c("SimulationNumber"))
 
 		# use summary function to generate summary
 		meltedSummary <- summarySE(meltedOutput, measurevar = "value", groupvars = c("variable"))
@@ -499,7 +499,7 @@ shinyServer(function(input, output) {
 		,contentType = 'application/pdf'
 	)
 	
-	plotDeathProp <- reactive(
+	plotDeathProp <-reactive(
 	{
 		numReps <- input$N
 		results <- generateLHS()
@@ -510,7 +510,7 @@ shinyServer(function(input, output) {
 		colnames(results) = c(paste(privateSales$Country), "All Countries", "SimulationNumber")
 		
 		# reformat data from wide to long format
-		meltedOutput <- melt(results, id.vars = c("SimulationNumber"))
+		meltedOutput <-reshape2::melt(results, id.vars = c("SimulationNumber"))
 
 		# use summary function to generate summary
 		meltedSummary <- summarySE(meltedOutput, measurevar = "value", groupvars = c("variable"))
@@ -579,7 +579,7 @@ shinyServer(function(input, output) {
 		colnames(results) = c(paste(privateSales$Country), "All Countries", "SimulationNumber")
 		
 		# reformat data from wide to long format
-		meltedOutput <- melt(results, id.vars = c("SimulationNumber"))
+		meltedOutput <-reshape2::melt(results, id.vars = c("SimulationNumber"))
 
 		# use summary function to generate summary
 		meltedSummary <- summarySE(meltedOutput, measurevar = "value", groupvars = c("variable"))
@@ -663,7 +663,7 @@ shinyServer(function(input, output) {
 		,contentType = 'application/pdf'
 	)
 	
-	plotRequestedHist <- reactive(
+	plotRequestedHist <-reactive(
 	{
 		country <- input$histogram1
 		country2 <- country
@@ -934,7 +934,7 @@ shinyServer(function(input, output) {
 		}
 	)
 	
-	generateInputs <- reactive({
+	generateInputs <-reactive({
 		countrySpec <- input$countrySpecific
 		names2 <- names[-40]
 		names2 <- paste(names2)

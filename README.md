@@ -15,11 +15,7 @@ starts the interactive web tool:
 >webtool()
 
 To close the web tool:
-
-* Mac OS: Hit ESC while in the R console to stop the web tool.
-* Command Line: Hit Crtl + C if running from the command line.
-* Windows: Hit Ctrl + Break while in the R console to stop the web tool.
-
+* Hit ESC or Ctrl + C
 
 Users set input parameters using interactive sliders:
 * the number of simulations for an uncertainty and sensitivity analysis

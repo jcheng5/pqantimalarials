@@ -23,11 +23,8 @@
 #'   sub-Sarahan Africa". 2014.
 
 #' @export
-#' @examples
-#' webtool()
 
 webtool <- function(){
-  library(shiny)
 
   shiny::runApp(system.file('webtool', package = 'pqantimalarials'))
   
