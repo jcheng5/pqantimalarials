@@ -15,7 +15,7 @@ starts the interactive web tool:
 >webtool()
 
 To close the web tool:
-* Hit ESC or Ctrl + C
+* Interrupt R, usually by hitting Esc or Ctrl + C
 
 Users set input parameters using interactive sliders:
 * the number of simulations for an uncertainty and sensitivity analysis
