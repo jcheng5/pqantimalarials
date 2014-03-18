@@ -1,7 +1,6 @@
 #' @title
 #' Estimated under-five deaths associated with poor-quality
 #'   antimalarials in sub-Saharan Africa.
-
 #' @description
 #' pqantimalarials provides an interactive web tool that
 #' allows users to produce their own estimates of the
@@ -14,11 +13,9 @@
 #' starts the interactive web tool on the user's
 #' machine. You can follow the development of this package at:
 #' \url{https://github.com/renschler/pqantimalarials}.
-
 #' @import shiny rms plyr RColorBrewer reshape2
 #' @docType package
 #' @name pqantimalarials
-
 #' @references
 #' J. Patrick Renschler, Kelsey Walters, Paul Newton,
 #'   Ramanan Laxminarayan. "Estimated under-five deaths

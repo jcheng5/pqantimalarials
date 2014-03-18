@@ -22,12 +22,12 @@ Version: 0.1
 Author: J. Patrick Renschler <patrick.renschler@gmail.com>
 Maintainer: J. Patrick Renschler <patrick.renschler@gmail.com>
 Depends:
-    methods
+    R (>= 2.14.1),
+    shiny(>= 0.8.0),
+    rms
 Imports:
-    shiny,
     reshape2,
     RColorBrewer,
-    rms,
     plyr
 LazyData: true
 License: GPL-3
