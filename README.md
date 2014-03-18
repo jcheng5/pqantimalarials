@@ -42,6 +42,8 @@ run enter the following lines into your R console.
 
 > install.packages("pqantimalarials")
 
+> library(pqantimalarials)
+
 > webtool()
 
 #### FAQ
