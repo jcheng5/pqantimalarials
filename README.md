@@ -34,7 +34,7 @@ results generated using different input settings, and later be able
 to reference which settings were used for what outputs.
 
 You can track development of this package at:
-http://github.com/renschler/pqantimalarials
+[http://github.com/renschler/pqantimalarials](http://github.com/renschler/pqantimalarials)
 
 #### Set Up
 This web tool has been made available as an R package. To install and
