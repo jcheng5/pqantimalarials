@@ -20,7 +20,7 @@
 #'	}
 #' @docType data
 #' @format A data frame with 39 rows and 15 variables
-#' @name u5deathsWHO2010.rda
+#' @name u5deathsWHO2010
 #' @source
 #' \href{http://apps.who.int/gho/data/node.main.GBDC-YEARS0-4?lang=en}{WHO - Global Health Observatory Data Repository: Mortality by age group and cause: Children aged 0 to 4 years 2010}
 NULL
