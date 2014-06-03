@@ -13,7 +13,8 @@
 #' starts the interactive web tool on the user's
 #' machine. You can follow the development of this package at:
 #' \url{https://github.com/renschler/pqantimalarials}.
-#' @import shiny rms plyr RColorBrewer reshape2
+#' @import rms plyr RColorBrewer reshape2
+#' @importFrom shiny runApp
 #' @docType package
 #' @name pqantimalarials
 #' @references
